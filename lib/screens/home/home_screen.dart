@@ -8,13 +8,13 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   String _text = '';
-  var email = Email('felipe.bufelli@gmail.com', '9874febufelli');
+  var email = Email('seu_email', 'sua_senha');
 
   void _sendEmail() async {
     bool result = await email.sendMessage(
-      'Se você ta lendo isso, consegui enviar e-mail pelo app rsrs',
-      'isadoracezarino@gmail.com', 
-      'URGENTE'
+      'Corpo do email',
+      'Email de destino', 
+      'Assunto do email'
     );
 
     setState(() {
